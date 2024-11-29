@@ -19,6 +19,12 @@ export const Blockchain = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
     width: 90dvw;
+
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 90dvw;
+    }
 `;
 
 export const Input = styled.input<{ $block?: boolean }>`
