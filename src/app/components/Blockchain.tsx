@@ -3,10 +3,12 @@ import * as S from "@/styles";
 import {useForm} from "react-hook-form";
 import Block, {IBlock} from "@/app/components/Block";
 import Mining from "@/app/components/Mining";
+import ServiceUnavailable from "@/app/components/ServiceUnavailable/ServiceUnavailable";
 
 const Blockchain = () => {
     const {register, handleSubmit, reset} = useForm<{ data: string }>();
     const [isMining, setIsMining] = useState(false);
+    const [isError, setIsError] = useState(false);
     const baseUrl = process.env.BASE_URL || 'http://localhost:8080/api/blockchain';
     const [invalidBlockIndex, setInvalidBlockIndex] = useState<number>();
 
@@ -32,13 +34,12 @@ const Blockchain = () => {
     const [blockchain, setBlockChain] = useState<Array<IBlock>>([]);
 
     async function getBlockChain() {
-        try {
-            const request = await fetch(baseUrl);
-            const response = await request.json();
-            console.log(response);
-            setBlockChain(response);
-        } catch (error) {
-            console.warn(error)
+        setIsError(false);
+        const request = await fetch(baseUrl);
+        const response = await request.json();
+        setBlockChain(response);
+        if (response.status === 404) {
+            setIsError(true);
         }
     }
 
@@ -78,45 +79,46 @@ const Blockchain = () => {
         }
     }
 
-    return (
-        <S.App>
-            <S.Title>Blockchain by marco</S.Title>
-            <S.Blockchain>
-                <>
-                    <S.Trash className="material-symbols-outlined" onClick={() => deleteBlockChain()}
-                             title='Deletar blockchain'>
-                        delete
-                    </S.Trash>
-                    {
-                        blockchain && blockchain.length >= 0 &&
-                        blockchain.map((block, index) => {
-                            return (
-                                <>
-                                    <Block key={index} block={block}
-                                           isInvalidBlock={(invalidBlockIndex !== undefined && block.id >= invalidBlockIndex)}
-                                           validateChain={validateChain}/>
+    return isError ? <ServiceUnavailable/>
+        : blockchain.length ? (
+            <S.App>
+                <S.Title>Blockchain by marco</S.Title>
+                <S.Blockchain>
+                    <>
+                        <S.Trash className="material-symbols-outlined" onClick={() => deleteBlockChain()}
+                                 title='Deletar blockchain'>
+                            delete
+                        </S.Trash>
+                        {
+                            blockchain && blockchain.length >= 0 &&
+                            blockchain.map((block, index) => {
+                                return (
+                                    <>
+                                        <Block key={index} block={block}
+                                               isInvalidBlock={(invalidBlockIndex !== undefined && block.id >= invalidBlockIndex)}
+                                               validateChain={validateChain}/>
 
-                                </>
-                            )
-                        })
-                    }
-                    {!isMining &&
-                        <S.Block>
-                            <S.Form onSubmit={handleSubmit(onSubmit)}>
-                                <p>New block</p>
-                                <S.Input placeholder='data' {...register('data')} autoFocus={true}/>
-                                <S.Button type="submit">Add</S.Button>
-                            </S.Form>
-                        </S.Block>
-                    }
-                    {
-                        isMining &&
-                        <Mining/>
-                    }
-                </>
-            </S.Blockchain>
-        </S.App>
-    );
+                                    </>
+                                )
+                            })
+                        }
+                        {!isMining &&
+                            <S.Block>
+                                <S.Form onSubmit={handleSubmit(onSubmit)}>
+                                    <p>New block</p>
+                                    <S.Input placeholder='data' {...register('data')} autoFocus={true}/>
+                                    <S.Button type="submit">Add</S.Button>
+                                </S.Form>
+                            </S.Block>
+                        }
+                        {
+                            isMining &&
+                            <Mining/>
+                        }
+                    </>
+                </S.Blockchain>
+            </S.App>
+        ) : <></>;
 };
 
 export default Blockchain;
