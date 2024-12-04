@@ -102,7 +102,7 @@ export const Skeleton = styled.div`
         width: 150%;
         height: 100%;
         background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
-        animation: loading 1s infinite linear; /* Aumenta a velocidade da animação */
+        animation: loading 1s infinite linear;
     }
 
     @keyframes loading {

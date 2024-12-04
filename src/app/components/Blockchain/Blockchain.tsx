@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import * as S from "@/styles";
 import {useForm} from "react-hook-form";
-import Block, {IBlock} from "@/app/components/Block";
-import Mining from "@/app/components/Mining";
+import Block, {IBlock} from "@/app/components/Block/Block";
+import Mining from "@/app/components/Mining/Mining";
 import ServiceUnavailable from "@/app/components/ServiceUnavailable/ServiceUnavailable";
 
 const Blockchain = () => {
@@ -34,11 +34,17 @@ const Blockchain = () => {
     const [blockchain, setBlockChain] = useState<Array<IBlock>>([]);
 
     async function getBlockChain() {
-        setIsError(false);
-        const request = await fetch(baseUrl);
-        const response = await request.json();
-        setBlockChain(response);
-        if (response.status === 404) {
+        try{
+            setIsError(false);
+            const request = await fetch(baseUrl);
+            console.log(request);
+            const response = await request.json();
+            setBlockChain(response);
+            if (response.status === 404) {
+                setIsError(true);
+            }
+        }catch(error){
+            console.warn(error);
             setIsError(true);
         }
     }
