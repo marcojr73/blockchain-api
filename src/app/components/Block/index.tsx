@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import * as S from "@/styles";
 import {useForm} from "react-hook-form";
-import Mining from "@/app/components/Mining/Mining";
+import Mining from "@/app/components/Mining";
 
 const Block = ({block, validateChain, isInvalidBlock}: {
     block: IBlock,

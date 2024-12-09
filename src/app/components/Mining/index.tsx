@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from "@/styles";
-import Skeleton from "@/app/components/Skeleton/Skeleton";
+import Skeleton from "@/app/components/Skeleton";
 
 const Mining = () => {
     return (

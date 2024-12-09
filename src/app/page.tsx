@@ -1,16 +1,10 @@
-'use client';
-
-import Blockchain from "@/app/components/Blockchain/Blockchain";
-import { useState } from "react";
-import Menu from "./components/Menu";
+import App from "./app";
+import { TranslateProvider } from "./components/providers/translateProvider";
 
 export default function Home() {
-    const [step, setStep] = useState(EStep.MENU);
-
-    return step === EStep.MENU ? <Menu callback={setStep}/> : <Blockchain />;
-}
-
-export enum EStep {
-    MENU = 0,
-    BLOCKCHAIN = 1,
+    return (
+        // <TranslateProvider>
+            <App />
+        // </TranslateProvider>
+    );
 }

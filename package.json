@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.10",
+    "@mui/material": "^6.1.10",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "i18next": "^22.4.9",
+    "react-i18next": "^12.1.4"
   },
   "devDependencies": {
     "@types/node": "^20",
