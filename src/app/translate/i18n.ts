@@ -6,7 +6,7 @@ import ptJson from "./PT.json"
 import enJson from "./EN.json"
 
 i18n.use(initReactI18next).init({
-    fallbackLng: "pt",
+    fallbackLng: "en",
     interpolation: {
         escapeValue: false
     },

@@ -1,6 +1,10 @@
 {
     "translation": {
-        "hello-1": "Hello! I'm Marco!",
-        "hello-2": "This application was developed with the aim of explaining the main concepts of how a blockchain works, check out my article below and come back to interact with the application"
+        "Hello-1": "Olá! Eu sou o Marco!",
+        "Hello-2": "Esta aplicação foi desenvolvida com o objetivo de explicar os principais conceitos de como uma blockchain funciona. Confira meu artigo abaixo, interaja com a aplicação, confira o código completo no github. Sinta-se a vontate para me dar o que achou no meu linkedin.",
+        "Application": "Aplicação",
+        "Repository": "Repositório",
+        "Article": "Artigo",
+        "Author": "Marco Júnior"
     }
 }

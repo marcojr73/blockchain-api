@@ -1,6 +1,10 @@
 {
     "translation": {
-        "hello-1": "Hello! I'm Marco!",
-        "hello-2": "This application was developed with the aim of explaining the main concepts of how a blockchain works, check out my article below and come back to interact with the application"
+        "Hello-1": "Hello! I'm Marco!",
+        "Hello-2": "This application was developed with the aim of explaining the main concepts of how a blockchain works, check out my article below and come back to interact with the application",
+        "Application": "Application",
+        "Repository": "Repository",
+        "Article": "Article",
+        "Author": "Marco Júnior"
     }
 }
