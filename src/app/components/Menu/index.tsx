@@ -11,7 +11,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 
 const Menu = ({ callback, isLoading }: { callback: (arg: EStep) => void, isLoading: boolean }) => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
 
     function openNewTabToLink(url: string) {
         window.open(url);
@@ -36,7 +36,7 @@ const Menu = ({ callback, isLoading }: { callback: (arg: EStep) => void, isLoadi
                         {t('Application')}
                     </S.Item>
                     <S.Item
-                        onClick={() => openNewTabToLink(URLS.article)}>
+                        onClick={() => openNewTabToLink(URLS.repository)}>
                         <GitHubIcon />
                         {t('Repository')}
                     </S.Item>
@@ -55,5 +55,6 @@ const Menu = ({ callback, isLoading }: { callback: (arg: EStep) => void, isLoadi
 export default Menu;
 
 const URLS = {
-    article: 'https://horn-pyramid-06d.notion.site/WEB-3-Blockchain-Smart-Contracts-e-o-futuro-da-estrutura-da-Internet-116e5108d21180ee9d62f29b762cd37d?pvs=74'
+    article: 'https://horn-pyramid-06d.notion.site/WEB-3-Blockchain-Smart-Contracts-e-o-futuro-da-estrutura-da-Internet-116e5108d21180ee9d62f29b762cd37d?pvs=74',
+    repository: 'https://github.com/marcojr73/blockchain-java-api',
 }

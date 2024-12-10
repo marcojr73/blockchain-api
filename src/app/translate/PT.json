@@ -12,13 +12,12 @@
         "New": "Novo bloco",
         "Delete": "Apagar cadeia",
         "Add": "Adicionar",
-        "UL": "Olá!",
-        "UL-1": "Você já pode começar a interagir com a blockchain!",
-        "UL-2": "Comece armazenando algo que você queira guardar na blockchain, para isso, preencha a propriedade data com seu texto.",
-        "UL-3": "Uma vez, na blockchain, este valor estará seguro.",
-        "UL-4": "Tente alterar um bloco no passado, modificando os valores de data, ou nonce.",
-        "UL-5": "Observe que o valor do hash desse bloco foi recalculado, consequentemente, invalidando toda a cadeia.",
-        "UL-6": "Para tornar essa cadeia válida novamente, clique em minerar os blocos em vermelho, na ordem menor para maior."
-
+        "UL": "Olá! \uD83D\uDE00",
+        "UL-1": "Agora você pode começar a interagir com a blockchain!",
+        "UL-2": "Para isso, armazene algo que deseja registrar preenchendo a propriedade data com o texto que quiser.",
+        "UL-3": "Uma vez armazenado na blockchain, esse valor estará protegido e seguro.",
+        "UL-4": "Experimente alterar um bloco no passado, modificando os valores de data ou nonce.",
+        "UL-5": "Você verá que o hash desse bloco será recalculado, invalidando toda a cadeia subsequente.",
+        "UL-6": "Para restaurar a validade da cadeia, clique em minerar os blocos destacados em vermelho, seguindo a ordem do menor para o maior."
     }
 }

@@ -12,13 +12,12 @@
         "New": "New block",
         "Delete": "Delete chain",
         "Add": "Add",
-        "UL": "Hello!",
+        "UL": "Hello! 😀",
         "UL-1": "You can now start interacting with the blockchain!",
-        "UL-2": "Start by storing something you want to keep on the blockchain. To do this, fill in the data property with your text.",
-        "UL-3": "Once on the blockchain, this value will be secure.",
+        "UL-2": "To do this, store something you want to register by filling in the data property with your text.",
+        "UL-3": "Once stored in the blockchain, this value will be protected and secure.",
         "UL-4": "Try modifying a block in the past by changing the data or nonce values.",
-        "UL-5": "Notice that the hash value of that block has been recalculated, consequently invalidating the entire chain.",
-        "UL-6": "To make this chain valid again, mine the red blocks in ascending order."
-
+        "UL-5": "You will see that the hash of this block has been recalculated, invalidating the entire chain.",
+        "UL-6": "To restore the validity of the chain, click on mine the blocks highlighted in red, following the order from smallest to largest."
     }
 }

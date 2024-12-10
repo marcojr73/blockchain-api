@@ -14,6 +14,8 @@ export const Social = styled.div<{ $isHidden?: boolean }>`
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    cursor: pointer;
+    gap: .2rem;
 `;
 
 export const Footer = styled.footer<{ $isHidden?: boolean }>`
