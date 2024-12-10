@@ -1,10 +1,24 @@
 {
     "translation": {
-        "Hello-1": "Hello! I'm Marco!",
-        "Hello-2": "This application was developed with the aim of explaining the main concepts of how a blockchain works, check out my article below and come back to interact with the application",
+        "Hello-1": "Hello! I am Marco!",
+        "Hello-2": "This application was developed with the goal of explaining the main concepts behind how a blockchain works. Check out my article below, interact with the application, view the complete code on GitHub, and feel free to share your thoughts with me on LinkedIn.",
         "Application": "Application",
         "Repository": "Repository",
         "Article": "Article",
-        "Author": "Marco Júnior"
+        "Genesis": "Genesis block",
+        "block": "Block",
+        "Data": "Data",
+        "Mine": "Mine",
+        "New": "New block",
+        "Delete": "Delete chain",
+        "Add": "Add",
+        "UL": "Hello!",
+        "UL-1": "You can now start interacting with the blockchain!",
+        "UL-2": "Start by storing something you want to keep on the blockchain. To do this, fill in the data property with your text.",
+        "UL-3": "Once on the blockchain, this value will be secure.",
+        "UL-4": "Try modifying a block in the past by changing the data or nonce values.",
+        "UL-5": "Notice that the hash value of that block has been recalculated, consequently invalidating the entire chain.",
+        "UL-6": "To make this chain valid again, mine the red blocks in ascending order."
+
     }
 }

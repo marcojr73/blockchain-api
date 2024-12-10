@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from "@/styles";
+import * as S from "@/app/components/Blockchain/styles";
 import Skeleton from "@/app/components/Skeleton";
 
 const Mining = () => {

@@ -1,10 +1,24 @@
 {
     "translation": {
         "Hello-1": "Olá! Eu sou o Marco!",
-        "Hello-2": "Esta aplicação foi desenvolvida com o objetivo de explicar os principais conceitos de como uma blockchain funciona. Confira meu artigo abaixo, interaja com a aplicação, confira o código completo no github. Sinta-se a vontate para me dar o que achou no meu linkedin.",
+        "Hello-2": "Esta aplicação foi desenvolvida com o objetivo de explicar os principais conceitos do funcionamento de uma blockchain. Confira meu artigo abaixo, interaja com a aplicação, confira o código completo no github. Sinta-se a vontate para me dar o que achou no meu linkedin.",
         "Application": "Aplicação",
         "Repository": "Repositório",
         "Article": "Artigo",
-        "Author": "Marco Júnior"
+        "Genesis": "Bloco genesis",
+        "block": "Bloco",
+        "Data": "Dados",
+        "Mine": "Minerar",
+        "New": "Novo bloco",
+        "Delete": "Apagar cadeia",
+        "Add": "Adicionar",
+        "UL": "Olá!",
+        "UL-1": "Você já pode começar a interagir com a blockchain!",
+        "UL-2": "Comece armazenando algo que você queira guardar na blockchain, para isso, preencha a propriedade data com seu texto.",
+        "UL-3": "Uma vez, na blockchain, este valor estará seguro.",
+        "UL-4": "Tente alterar um bloco no passado, modificando os valores de data, ou nonce.",
+        "UL-5": "Observe que o valor do hash desse bloco foi recalculado, consequentemente, invalidando toda a cadeia.",
+        "UL-6": "Para tornar essa cadeia válida novamente, clique em minerar os blocos em vermelho, na ordem menor para maior."
+
     }
 }

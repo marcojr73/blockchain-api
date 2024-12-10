@@ -34,6 +34,11 @@ export const blockchain = styled.div`
     bottom: 0;
     right: 0;
   }
+
+  @media only screen and (min-width: 600px) {
+        width: 250px;
+        height: 220px;
+    }
 `;
 
 export const Block = styled.div<{ $delay?: string }>`
@@ -65,5 +70,10 @@ export const Block = styled.div<{ $delay?: string }>`
 
     > * {
         transform: rotate(0deg);
+    }
+
+    @media only screen and (min-width: 600px) {
+        width: 75px;
+        height: 75px;
     }
 `;

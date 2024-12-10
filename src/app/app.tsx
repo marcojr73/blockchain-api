@@ -7,7 +7,6 @@ import ServiceUnavailable from "./components/ServiceUnavailable";
 import useFetchBlockchain from "./hooks/useFetchBlockchain";
 
 export default function App() {
-    const [step, setStep] = useState(EStep.MENU);
     const [isLoading, setIsLoading] = useState(false);
 
     const {
@@ -16,31 +15,30 @@ export default function App() {
         getBlockChain,
         invalidBlockIndex,
         isError,
-        validateChain
+        setIsError,
+        validateChain,
+        setBlockChain
     } = useFetchBlockchain();
 
-    useEffect(() => {
-        (async () => {
-            if (step === EStep.BLOCKCHAIN) {
-                setIsLoading(true);
-                await getBlockChain();
-                setIsLoading(false);
-            }
-        })();
-    }, [step])
+    async function startBlockchain() {
+        setIsLoading(true);
+        await getBlockChain();
+        setIsLoading(false);
+    }
 
     if (isError) {
-        return <ServiceUnavailable />;
+        return <ServiceUnavailable setIsError={setIsError}/>;
     }
 
     if (!blockchain.length) {
-        return <Menu callback={setStep} isLoading={isLoading} />;
+        return <Menu callback={startBlockchain} isLoading={isLoading} />;
     }
 
     if (blockchain.length) {
         return (
             <Blockchain
                 blockchain={blockchain}
+                setBlockChain={setBlockChain}
                 invalidBlockIndex={invalidBlockIndex}
                 deleteBlockChain={deleteBlockChain}
                 getBlockChain={getBlockChain}

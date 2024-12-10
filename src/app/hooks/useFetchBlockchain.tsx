@@ -59,7 +59,9 @@ const UseFetchBlockchain = () => {
         getBlockChain,
         blockchain,
         invalidBlockIndex,
-        isError
+        isError,
+        setIsError,
+        setBlockChain
     }
 }
 

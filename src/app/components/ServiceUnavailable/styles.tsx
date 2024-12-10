@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Bar = styled.div`
-    width: 80dvw;
+    width: 100%;
     height: 5dvh;
     background-color: #FFF;
 `;
@@ -9,9 +9,10 @@ export const Bar = styled.div`
 export const Body = styled.div`
     display: flex;
     height: 100dvh;
-    gap: 5rem;
+    width: 90dvw;
+    margin: auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: #FFF;
 `;

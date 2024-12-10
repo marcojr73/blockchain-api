@@ -1,14 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import * as S from "@/styles";
-import {useForm} from "react-hook-form";
+import React, { useEffect, useState } from 'react';
+import * as S from "../Blockchain/styles";
+import { useForm } from "react-hook-form";
 import Mining from "@/app/components/Mining";
+import TerminalIcon from '@mui/icons-material/Terminal';
+import { useTranslation } from 'react-i18next';
 
-const Block = ({block, validateChain, isInvalidBlock}: {
+const Block = ({ block, validateChain, isInvalidBlock }: {
     block: IBlock,
     validateChain: () => Promise<void>,
     isInvalidBlock: boolean
 }) => {
-    const {register, setValue, watch, handleSubmit} = useForm<IBlock>({
+    const { t } = useTranslation()
+    const { register, setValue, watch, handleSubmit } = useForm<IBlock>({
         defaultValues: {
             nonce: block.nonce,
             data: block.data,
@@ -77,33 +80,36 @@ const Block = ({block, validateChain, isInvalidBlock}: {
 
     return (
         !isMining ?
-            <S.Block isInvalidBlock={isInvalidBlock}>
+            <S.Block isInvalidBlock={isInvalidBlock} className={isInvalidBlock ? 'shake' : ''}>
                 <S.Form onSubmit={handleSubmit(onSubmit)}>
-                    <p>{block.id !== 0 ? 'Bloco ' + block.id : 'Genesis block'}</p>
+                    <S.Label>
+                        <TerminalIcon />
+                        {block.id !== 0 ?  t('Block') + ' ' + block.id : t('Genesis')}
+                    </S.Label>
                     <S.Column>
                         <S.Label>Nonce</S.Label>
-                        <S.Input placeholder='nonce' type='number' {...register('nonce')}/>
+                        <S.Input placeholder='nonce' type='number' {...register('nonce')} />
                     </S.Column>
 
                     <S.Column>
-                        <S.Label>Data</S.Label>
+                        <S.Label>{t('Data')}</S.Label>
                         <S.Input placeholder='data' {...register('data')} />
                     </S.Column>
 
                     <S.Column>
                         <S.Label>Hash</S.Label>
-                        <S.Input placeholder='hash' $block={true}  {...register('hash')}/>
+                        <S.Input placeholder='hash' $block={true}  {...register('hash')} />
                     </S.Column>
 
                     <S.Column>
                         <S.Label>previousHash</S.Label>
-                        <S.Input placeholder='previousHash' $block={true} {...register('previousHash')}/>
+                        <S.Input placeholder='previousHash' $block={true} {...register('previousHash')} />
                     </S.Column>
 
-                    <S.Button type="submit">Mine</S.Button>
+                    <S.Button type="submit">{t('Mine')}</S.Button>
                 </S.Form>
             </S.Block>
-            : <Mining/>
+            : <Mining />
     )
 };
 

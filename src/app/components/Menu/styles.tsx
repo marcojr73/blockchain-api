@@ -7,11 +7,19 @@ export const Body = styled.div`
     width: 90dvw;
     height: 100dvh;
     margin: auto;
+
+    @media only screen and (min-width: 600px) {
+        width: 50dvw;
+    }
 `;
 
 export const Text = styled.p`
     width: 90%;
     font-size: .9rem;
+
+    @media only screen and (min-width: 600px) {
+        font-size: 1rem;
+    }
 `;
 
 export const Title = styled.h1<{ $isHidden?: boolean }>`
@@ -19,6 +27,10 @@ export const Title = styled.h1<{ $isHidden?: boolean }>`
     text-align: center;
     transition: ease opacity .5s;
     opacity: ${props => props.$isHidden ? '0' : '1'};
+    
+    @media only screen and (min-width: 600px) {
+        font-size: 2.5rem;
+    }
 `;
 
 export const Item = styled.div`
@@ -32,6 +44,16 @@ export const Item = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+
+    :hover{
+        border: 3px solid #FFF;
+    }
+
+    @media only screen and (min-width: 600px) {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
 `;
 
 export const Grid = styled.section`
@@ -52,7 +74,6 @@ export const Column = styled.div<{ $isHidden?: boolean }>`
     opacity: ${props => props.$isHidden ? '0' : '1'};
 `;
 
-
 export const Social = styled.div<{ $isHidden?: boolean }>`
     display: flex;
     justify-content: center;
@@ -64,9 +85,13 @@ export const Footer = styled.footer<{ $isHidden?: boolean }>`
     transition: ease opacity .5s;
     opacity: ${props => props.$isHidden ? '0' : '1'};
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (min-width: 600px) {
+        gap: 2rem;
+    }
 `;
 
 export const Language = styled.div`

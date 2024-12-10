@@ -1,7 +1,7 @@
 "use client";
 
 import App from "./app";
-import { TranslateProvider } from "./components/providers/translateProvider";
+import { TranslateProvider } from "./providers/translateProvider";
 import "./translate/i18n";
 
 export default function Home() {
