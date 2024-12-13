@@ -55,6 +55,6 @@ const Menu = ({ callback, isLoading }: { callback: (arg: EStep) => void, isLoadi
 export default Menu;
 
 const URLS = {
-    article: 'https://horn-pyramid-06d.notion.site/WEB-3-Blockchain-Smart-Contracts-e-o-futuro-da-estrutura-da-Internet-116e5108d21180ee9d62f29b762cd37d?pvs=74',
+    article: 'https://medium.com/uex-io/a-web-desde-seu-in%C3%ADcio-vem-transformando-a-sociedade-e-a-forma-como-interagimos-trabalhamos-e-62c4785ad1c9',
     repository: 'https://github.com/marcojr73/blockchain-java-api',
 }
